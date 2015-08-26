@@ -1,4 +1,4 @@
-Then /^Upload Profile Picture$/ do
+Then /^Insert the path into input box and click Enter$/ do
   uploadInputBox = $driver.find_element :xpath => "//input[@name = 'userName']"
   filePath = File.join(File.dirname(Dir.pwd), '/fp2/ImageFolder/myfirstscreen.jpg')
   uploadInputBox.send_keys filePath
@@ -6,20 +6,20 @@ Then /^Upload Profile Picture$/ do
  # uploadInputBox.send_keys :return
 end
 
-Then /^Upload Picture and Submit$/ do
+Then /^Upload Picture using absolute path and Submit$/ do
   uploadInputBox = $driver.find_element :xpath => "//input[@type = 'file']"
-  filePath = File.join(File.dirname(__FILE__), '/../../../ImageFolder/myfirstscreen.jpg')
-  puts filePath
+  # filePath = File.join(File.dirname(__FILE__), '/../../../ImageFolder/myfirstscreen.jpg')
   #uploadInputBox.send_keys filePath
   uploadInputBox.send_keys "c:\\myfirstscreen.jpg"
-  sleep 8
+  sleep 4
   submitButton = $driver.find_element :xpath => "//input[@type = 'submit']"
   submitButton.click
 end
 
-Then /^Upload Picture to input = file$/ do
+Then /^Upload Picture to input = file and test DIR$/ do
   uploadInputBox = $driver.find_elements :xpath => "//input[@name = 'qqfile']"
   #Dir.pwd returns the full path to project including Projectfolder C:/Users/Katrinka/RubymineProjects/fp2
+  #!!!path doesn't work like c:/folder or c:\folder. It works only using c:\\folder
   filePath = File.join(Dir.pwd.tr("/","\\"), '\\ImageFolder\\myfirstscreen.jpg')
   #filePath = File.join(File.dirname(__FILE__).tr("/","\\"), '\\myfirstscreen.jpg')
   puts "filepath " + filePath
