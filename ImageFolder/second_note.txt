@@ -1,0 +1,4 @@
+Google announced the news in a blog on the eve of the Ifa tech show in Berlin, where several new smartwatches are set to be unveiled.
+"Today, Android Wear for iOS works with the LG Watch Urbane," wrote David Singleton, Android Wear's director of engineering. This is the line of text I was looking for
+"All future Android Wear watches, including those from Huawei, Asus, and Motorola will also support iOS, so stay tuned for more."
+He did not discuss whether iOS compatibility would eventually be extended to other existing Android smartwatches, but instead concentrated on the functions an iPhone user would gain.
